@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurar Valores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <div id="password-form" class="rates-container">
+            <h2>Ingresa la Contraseña</h2>
+            <input type="password" id="password-input" placeholder="Contraseña">
+            <button id="submit-password">Entrar</button>
+            <p id="error-message" style="color: red; display: none;">Contraseña incorrecta.</p>
+        </div>
+
+        <div id="rates-container" class="rates-container hidden">
+            <h2>Configurar Valores</h2>
+            <label for="usdt-rate">Valor del USDT:</label>
+            <input type="number" id="usdt-rate" placeholder="0.00">
+            
+            <label for="bcv-rate">Valor del Dólar BCV:</label>
+            <input type="number" id="bcv-rate" placeholder="0.00">
+            
+            <label for="paypal-rate">Valor del Dólar PayPal:</label>
+            <input type="number" id="paypal-rate" placeholder="0.00">
+
+            <button id="save-rates">Guardar Valores</button>
+        </div>
+    </div>
+    <script src="valores.js"></script>
+</body>
+</html>

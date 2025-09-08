@@ -1,0 +1,155 @@
+body {
+    background-color: #121212;
+    color: #FFFFFF;
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    padding: 20px;
+}
+
+.hamburger-menu {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1a1a1a;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 10;
+}
+
+.sidebar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column; /* Permite que los elementos se apilen verticalmente */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilos para el contenedor del logo */
+.logo-container {
+    text-align: center; /* Centra el logo horizontalmente */
+    margin-bottom: 30px; /* Espacio debajo del logo */
+}
+
+.app-logo {
+    max-width: 150px; /* Tamaño máximo del logo */
+    height: auto; /* Mantiene la proporción */
+}
+
+
+.currency-converter {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.currency-option {
+    display: flex;
+    align-items: center;
+    background-color: #212121;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.currency-symbol {
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+input {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    text-align: right;
+    width: 100%;
+    outline: none;
+}
+
+input:focus {
+    box-shadow: 0 0 10px #00FFFF;
+    border-radius: 8px;
+}
+
+#currency-toggle {
+    background: #212121;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#currency-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #212121;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+#currency-list li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#currency-list li:hover {
+    background: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+.paypal-link {
+    background-color: #008000;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.paypal-link:hover {
+    background-color: #006400;
+}

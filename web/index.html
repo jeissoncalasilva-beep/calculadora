@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Calculadora de Cambio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <button id="menu-btn" class="hamburger-menu">☰</button>
+    </header>
+
+    <nav id="sidebar" class="sidebar">
+        <a href="#calculator" id="show-calculator">Calculadora</a>
+    </nav>
+
+    <main id="main-content">
+        <div id="calculator-section" class="content">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo de la Aplicación" class="app-logo">
+            </div>
+
+            <div class="currency-converter">
+                <div class="currency-option">
+                    <span class="currency-symbol">BS</span>
+                    <input type="number" id="bs-input" placeholder="0">
+                </div>
+
+                <button id="currency-toggle">USDT ▼</button>
+                <ul id="currency-list" class="hidden">
+                    <li data-currency="USDT">USDT</li>
+                    <li data-currency="BCV">Dólar BCV</li>
+                    <li data-currency="PAYPAL">Dólar PayPal</li>
+                </ul>
+
+                <div class="currency-option">
+                    <span id="output-symbol">USDT</span>
+                    <input type="number" id="output-input" placeholder="0">
+                </div>
+                
+                <a id="paypal-link" class="paypal-link" href="#" target="_blank" style="display: none;">
+                    <span class="lock-icon">🔒</span>
+                    Vender Saldo Paypal
+                </a>
+            </div>
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(reg => console.log('Service Worker registrado', reg))
+                    .catch(err => console.log('Error al registrar Service Worker', err));
+            });
+        }
+    </script>
+</body>
+</html>
